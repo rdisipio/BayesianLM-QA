@@ -1,0 +1,48 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[requires]
+python_version = "3.13"
+
+[packages]
+# HF + PyTorch stack
+transformers = ">=4.44"
+datasets = ">=3.0"
+accelerate = ">=0.34"
+sentencepiece = "*"
+torch = ">=2.5"               # 2.5.0+ has official Python 3.13 wheels
+
+# Parameter-Efficient Fine-Tuning (LoRA)
+peft = ">=0.12"
+
+# Bayesian approximations for deep nets
+laplace-torch = ">=0.1.7"
+
+# Probabilistic programming — NumPyro + JAX
+# JAX team is rolling out 3.13 wheels; if unavailable, you may need to fall back to 3.12
+numpyro = ">=0.15.2"
+jax = {version = ">=0.4.28", extras = ["cpu"]}
+jaxlib = ">=0.4.28"
+
+# Optional: Pyro-based VI (SVI on head/LoRA)
+pyro-ppl = ">=1.9.0"
+
+# Metrics & classic ML bits
+scikit-learn = ">=1.5"
+pandas = ">=2.2"
+matplotlib = ">=3.9"
+
+# Optional: evaluation helpers
+evaluate = ">=0.4.2"
+
+[dev-packages]
+jupyter = "*"
+ipykernel = "*"
+black = ">=24.10"
+isort = ">=5.13"
+pre-commit = ">=3.8"
+
+[scripts]
+fmt = "black . && isort ."
