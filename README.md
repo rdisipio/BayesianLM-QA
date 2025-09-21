@@ -87,7 +87,7 @@ If you use or adapt these examples, please cite as:
 ```bibtex
 @misc{bayesianlmqa2025,
   title  = {BayesianLM-QA: Uncertainty-aware Question Answering with Bayesian Reasoning},
-  author = {Your Name},
+  author = {Riccardo Di Sipio},
   year   = {2025},
   note   = {Workable exemplars for ethical AI and calibrated refusal in LLMs}
 }
